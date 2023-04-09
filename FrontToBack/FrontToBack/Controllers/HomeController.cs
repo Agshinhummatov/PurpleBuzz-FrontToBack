@@ -20,6 +20,8 @@ namespace FrontToBack.Controllers
 
         public async Task<IActionResult> Index()
         {
+            SliderBackground sliderBackground = await _context.sliderBackgrounds.Where(m => !m.SoftDelete).FirstOrDefaultAsync();
+
             IEnumerable<Slider> sliders = await _context.Sliders.Where(m => !m.SoftDelete).ToListAsync();
 
             IEnumerable<InfoService> infoServices = await _context.InfoServices.Where(m => !m.SoftDelete).ToListAsync();
@@ -37,7 +39,8 @@ namespace FrontToBack.Controllers
                 InfoServices = infoServices,
                 Categories = categories,
                 Works = works,
-                RecentWorks = recentWorks
+                RecentWorks = recentWorks,
+                sliderBackground = sliderBackground
 
             };
 

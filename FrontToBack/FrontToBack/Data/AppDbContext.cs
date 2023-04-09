@@ -43,6 +43,9 @@ namespace FrontToBack.Data
 
         public DbSet<OfferPremium> OfferPremiums { get; set; }
 
+        public DbSet<SliderBackground> sliderBackgrounds { get; set; }
+
+
 
     }
 }

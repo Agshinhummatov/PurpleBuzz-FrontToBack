@@ -17,5 +17,7 @@ namespace FrontToBack.ViewModels
 
 
         public IEnumerable<RecentWork> RecentWorks { get; set; }
+
+        public SliderBackground sliderBackground { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace FrontToBack.Controllers
     public class AboutController : Controller
     {
         private readonly AppDbContext _context;
+
         public AboutController(AppDbContext context)
         {
             _context = context;
